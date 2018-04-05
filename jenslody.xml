@@ -46,7 +46,7 @@
   <remove-project name="vendor_validus" />
   <project path="vendor/validus" name="jenslody/vendor_validus" remote="github" revision="8.1" />
 
-  <project path="packages/apps/OTAUpdates" name="jenslody/OTAUpdates" remote="github" revision="aosp" />
+  <project path="packages/apps/OTAUpdates" name="jenslody/OTAUpdates" remote="github" revision="8.1" />
 
 
 <!--
