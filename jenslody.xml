@@ -36,10 +36,10 @@
   <project path="hardware/qcom/display-caf/msm8998" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.1-caf-8998" />
 -->
 
-  <!-- Qcom Common 
+  <!-- Qcom Common -->
   <remove-project name="device_qcom_common" />
   <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="lineage-15.1"/>
-
+<!--
   <remove-project name="device_qcom_sepolicy" />
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" revision="lineage-15.1" groups="pdk" />
 
@@ -50,6 +50,9 @@
   <remove-project name="frameworks_base" />
   <project path="frameworks/base" name="jenslody/frameworks_base" remote="github" revision="8.1" groups="pdk" />
 
+  <remove-project name="packages_apps_WolvesDen" />
+  <project path="packages/apps/WolvesDen" name="jenslody/packages_apps_WolvesDen" remote="github" revision="8.1" />
+
   <remove-project name="system_sepolicy" />
   <project path="system/sepolicy" name="jenslody/system_sepolicy" groups="pdk" remote="github" revision="8.1" />
 
@@ -59,7 +62,9 @@
   <remove-project name="frameworks_av" />
   <project path="frameworks/av" name="jenslody/android_frameworks_av" remote="github" revision="lineage-15.1" groups="pdk" />
 
- <!-- Samsung Hardware Repo -->
+ <project path="system/tools/dtbtool" name="LineageOS/android_system_tools_dtbtool" remote="github" revision="lineage-15.1" />
+ 
+<!-- Samsung Hardware Repo -->
   <project path="hardware/samsung" name="jenslody/android_hardware_samsung" remote="github" revision="lineage-15.1" />
 
  <!-- Samsung MSM8916 Common Repos -->
