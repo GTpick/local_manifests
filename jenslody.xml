@@ -62,6 +62,9 @@
   <remove-project name="frameworks_av" />
   <project path="frameworks/av" name="jenslody/android_frameworks_av" remote="github" revision="lineage-15.1" groups="pdk" />
 
+  <remove-project name="packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="jenslody/packages_apps_Settings" remote="github" revision="8.1" groups="pdk-fs" />
+
  <project path="system/tools/dtbtool" name="LineageOS/android_system_tools_dtbtool" remote="github" revision="lineage-15.1" />
  
 <!-- Samsung Hardware Repo -->
