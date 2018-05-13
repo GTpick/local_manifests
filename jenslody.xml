@@ -6,6 +6,8 @@
            review="review.msm8916.com"
            revision="lineage-15.1" />
 
+<!--
+-->
   <remove-project name="platform/prebuilts/android-emulator" />
 
   <remove-project name="platform/prebuilts/clang/host/darwin-x86"/>
@@ -23,7 +25,6 @@
   
   <remove-project name="platform/prebuilts/gradle-plugin" />
   <remove-project name="platform/prebuilts/libs/libedit" />
-
 <!--
   <remove-project name="hardware_qcom_display" />
   <project path="hardware/qcom/display-caf/apq8084" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.1-caf-8084" />
@@ -36,19 +37,27 @@
   <project path="hardware/qcom/display-caf/msm8998" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="lineage-15.1-caf-8998" />
 -->
 
-  <!-- Qcom Common -->
-  <remove-project name="device_qcom_common" />
-  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="lineage-15.1"/>
-<!--
-  <remove-project name="device_qcom_sepolicy" />
-  <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" revision="lineage-15.1" groups="pdk" />
+  <remove-project name="packages_apps_Camera2" />
+  <project path="packages/apps/Camera2" name="jenslody/android_packages_apps_Camera2" remote="github" revision="lineage-15.1" groups="pdk-fs" />
 
--->
-  <remove-project name="vendor_validus" />
-  <project path="vendor/validus" name="jenslody/vendor_validus" remote="github" revision="8.1" />
+  <remove-project name="frameworks_av" />
+  <project path="frameworks/av" name="jenslody/android_frameworks_av" remote="github" revision="oreo.1" groups="pdk" />
+
+  <remove-project name="build" />
+  <project path="build/make" name="jenslody/build" remote="github" revision="oreo.1" />
 
   <remove-project name="frameworks_base" />
-  <project path="frameworks/base" name="jenslody/frameworks_base" remote="github" revision="8.1" groups="pdk" />
+  <project path="frameworks/base" name="jenslody/frameworks_base-1" remote="github" revision="oreo.1" groups="pdk" />
+
+  <remove-project name="vendor_bootleggers" />
+  <project path="vendor/bootleggers" name="jenslody/vendor_bootleggers" remote="github" revision="oreo.1" />
+
+  <!-- Qcom Common -->
+<!--
+  <remove-project name="device_qcom_common" />
+  <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" remote="github" revision="lineage-15.1"/>
+  <remove-project name="device_qcom_sepolicy" />
+  <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" remote="github" revision="lineage-15.1" groups="pdk" />
 
   <remove-project name="packages_apps_WolvesDen" />
   <project path="packages/apps/WolvesDen" name="jenslody/packages_apps_WolvesDen" remote="github" revision="8.1" />
@@ -56,16 +65,11 @@
   <remove-project name="system_sepolicy" />
   <project path="system/sepolicy" name="jenslody/system_sepolicy" groups="pdk" remote="github" revision="8.1" />
 
-  <remove-project name="packages_apps_Camera2" />
-  <project path="packages/apps/Camera2" name="jenslody/android_packages_apps_Camera2" remote="github" revision="lineage-15.1" groups="pdk-fs" />
-
-  <remove-project name="frameworks_av" />
-  <project path="frameworks/av" name="jenslody/android_frameworks_av" remote="github" revision="lineage-15.1" groups="pdk" />
-
   <remove-project name="packages_apps_Settings" />
   <project path="packages/apps/Settings" name="jenslody/packages_apps_Settings" remote="github" revision="8.1" groups="pdk-fs" />
 
  <project path="system/tools/dtbtool" name="LineageOS/android_system_tools_dtbtool" remote="github" revision="lineage-15.1" />
+-->
  
 <!-- Samsung Hardware Repo -->
   <project path="hardware/samsung" name="jenslody/android_hardware_samsung" remote="github" revision="lineage-15.1" />
@@ -74,19 +78,20 @@
   <project path="device/samsung/qcom-common" name="jenslody/android_device_samsung_qcom-common" remote="github" groups="device" revision="lineage-15.1" />
 
  <!-- Galaxy J5 (SM-J500H - j53gxx) || (J500F-G-M-Y - j5lte) || (J500FN - j5nlte) || (J5008 - j5ltechn) -->
-  <project path="device/samsung/j5nlte" name="jenslody/android_device_samsung_j5nlte" groups="device" remote="github" revision="lineage-15.1" />
-  <project path="device/samsung/j5ltechn" name="jenslody/android_device_samsung_j5ltechn" groups="device" remote="github" revision="lineage-15.1" />
-  <project path="device/samsung/j5lte" name="jenslody/android_device_samsung_j5lte" groups="device" remote="github" revision="lineage-15.1" />
-  <project path="device/samsung/j53gxx" name="jenslody/android_device_samsung_j53gxx" groups="device" remote="github" revision="lineage-15.1" />
+  <project path="device/samsung/j5nlte" name="jenslody/android_device_samsung_j5nlte" groups="device" remote="github" revision="oreo.1" />
+  <project path="device/samsung/j5ltechn" name="jenslody/android_device_samsung_j5ltechn" groups="device" remote="github" revision="oreo.1" />
+  <project path="device/samsung/j5lte" name="jenslody/android_device_samsung_j5lte" groups="device" remote="github" revision="oreo.1" />
+  <project path="device/samsung/j53gxx" name="jenslody/android_device_samsung_j53gxx" groups="device" remote="github" revision="oreo.1" />
   <project path="device/samsung/j5-common" name="jenslody/android_device_samsung_j5-common" groups="device" remote="github" revision="lineage-15.1" />
 
+<!-- -->
   <remove-project name="hardware_qcom_audio"/>
   <project path="hardware/qcom/audio-caf/msm8916" name="Galaxy-MSM8916/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" remote="github" revision="lineage-15.1-caf-8916" />
 
   <remove-project name="vendor_qcom_opensource_dataservices"/>
   <project path="vendor/qcom/opensource/dataservices" name="Galaxy-MSM8916/android_vendor_qcom_opensource_dataservices" remote="github" revision="lineage-15.1" />
 
-  <project path="packages/apps/OTAUpdates" name="jenslody/OTAUpdates" remote="github" revision="8.1" />
+  <project path="packages/apps/OTAUpdates" name="jenslody/OTAUpdates" remote="github" revision="oreo.1" />
 
  <!-- TWRP -->
 <!--
@@ -145,7 +150,7 @@
   <project path="device/samsung/msm8916-common" name="Galaxy-MSM8916/android_device_samsung_msm8916-common" groups="device" remote="github" revision="lineage-15.1" />
 
  <!-- arm-eabi-7.2 -->
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" remote="github" revision="master"/>
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" groups="pdk,linux,arm"  remote="github" revision="master"/>
 
  <!-- Dependencies -->
 <!--  <project path="external/toybox" name="omnirom/android_external_toybox" remote="github" revision="android-8.1"/> -->
